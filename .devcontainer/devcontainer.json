@@ -1,0 +1,17 @@
+{
+  "name": "Quizz Trivia Night",
+  "image": "://microsoft.com",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Quizz Game Server",
+      "onAutoForward": "notify",
+      "visibility": "public"
+    }
+  },
+  "postStartCommand": "bash .devcontainer/start-quizz.sh"
+}
